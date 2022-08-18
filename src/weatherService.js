@@ -79,33 +79,33 @@ const formatAir = (data) => {
     return (data.list[0])
 }
 
-const getData = () => {
-    const formattedCurrentWeather =  fetchData().then(formatCurrentWeather);
+const getData = async () => {
+    const formattedCurrentWeather =  await fetchData().then(formatCurrentWeather);
     return {...formattedCurrentWeather}
 }
 
-const getForecast = () => {
-    const formattedForecast = fetchForecastData().then(formatForecastWeather);
+const getForecast = async () => {
+    const formattedForecast = await fetchForecastData().then(formatForecastWeather);
     return {...formattedForecast}
 }
 
-const getAir = () => {
-    const formattedAir = fetchAirData().then(formatAir);
+const getAir = async () => {
+    const formattedAir = await fetchAirData().then(formatAir);
     return {...formattedAir}
 }
 
-const getLaData = () => {
-    const formattedLaCurrentWeather = fetchLaData().then(formatCurrentWeather);
+const getLaData = async () => {
+    const formattedLaCurrentWeather = await fetchLaData().then(formatCurrentWeather);
     return {...formattedLaCurrentWeather}
 }
 
-const getLaForecast = () => {
-    const formattedLaForecast = fetchLaForecastData().then(formatForecastWeather);
+const getLaForecast = async () => {
+    const formattedLaForecast = await fetchLaForecastData().then(formatForecastWeather);
     return {...formattedLaForecast}
 }
 
-const getLaAir = () => {
-    const formmattedLaAir = fetchLaAirData().then(formatAir);
+const getLaAir = async () => {
+    const formmattedLaAir = await fetchLaAirData().then(formatAir);
     return {...formmattedLaAir}
 }
 
