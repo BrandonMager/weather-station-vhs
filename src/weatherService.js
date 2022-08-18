@@ -19,7 +19,7 @@ const fetchForecastData = () => {
 
 const fetchAirData = () => {
     return(
-        fetch('http://api.openweathermap.org/data/2.5/air_pollution?lat=33.9803&lon=-118.4517&appid=b95b2f591dc9ac992cf7b24942b18383&units=imperial')
+        fetch('https://api.openweathermap.org/data/2.5/air_pollution?lat=33.9803&lon=-118.4517&appid=b95b2f591dc9ac992cf7b24942b18383&units=imperial')
         .then((response)=> (response.json()))
     )
 }
@@ -40,7 +40,7 @@ const fetchLaForecastData = () => {
 
 const fetchLaAirData = () => {
     return(
-        fetch('http://api.openweathermap.org/data/2.5/air_pollution?lat=34.0522&lon=-118.2437&appid=b95b2f591dc9ac992cf7b24942b18383&units=imperial')
+        fetch('https://api.openweathermap.org/data/2.5/air_pollution?lat=34.0522&lon=-118.2437&appid=b95b2f591dc9ac992cf7b24942b18383&units=imperial')
         .then((response)=> (response.json()))
     )
 }
