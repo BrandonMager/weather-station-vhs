@@ -19,10 +19,10 @@ export default function Picture() {
 
     useEffect( () => {
         if (weather === null){
-        const fetchWeather = async () => {
+        const fetchWeather = () => {
 
         
-        await getData().then((data) => {
+         getData().then((data) => {
             setWeather(data);
         })
         }
@@ -31,16 +31,16 @@ export default function Picture() {
     }
 
     if(days === null){
-        const fetchForecast = async () =>
-           await getForecast().then((data) => {
+        const fetchForecast = () =>
+            getForecast().then((data) => {
                 setDays(data);
            })
            fetchForecast()
     }
 
     if (air === null){
-        const fetchAir = async () => {
-            await getAir().then((data) => {
+        const fetchAir = () => {
+            getAir().then((data) => {
                 setAir(data)
             })
 
@@ -49,8 +49,8 @@ export default function Picture() {
     }
     
     if(LaWeather === null){
-        const fetchLaWeather =  async () => {
-            await getLaData().then((data) => {
+        const fetchLaWeather =  () => {
+            getLaData().then((data) => {
                 setLaWeather(data)
             })
         }
@@ -58,8 +58,8 @@ export default function Picture() {
     }
 
     if(LaDays === null){
-        const fetchLaDays = async () => {
-            await getLaForecast().then((data) => {
+        const fetchLaDays = () => {
+             getLaForecast().then((data) => {
                 setLaDays(data)
             })
         }
@@ -68,8 +68,8 @@ export default function Picture() {
     }
 
     if(LaAir === null){
-        const fetchLaAir = async () => {
-            await getLaAir().then((data) => {
+        const fetchLaAir = () => {
+            getLaAir().then((data) => {
                 setLaAir(data)
             })
         }
