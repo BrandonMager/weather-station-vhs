@@ -22,7 +22,7 @@ export default function Picture() {
         const fetchWeather = () => {
 
         
-         getData().then((data) => {
+        getData().then((data) => {
             setWeather(data);
         })
         }
